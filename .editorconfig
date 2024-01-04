@@ -1,0 +1,31 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 80
+
+[Makefile]
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.py]
+max_line_length = 88
+
+[*.{js,ts}]
+indent_size = 2
+
+[*.{json,yaml,yml}]
+indent_size = 2
+
+[*.{html,css}]
+indent_size = 2
