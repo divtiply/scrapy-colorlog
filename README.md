@@ -51,6 +51,8 @@ See also:
 
 ### COLORLOG_COLORS
 
+Default:
+
 ```python
 {
     "DEBUG": "blue",
