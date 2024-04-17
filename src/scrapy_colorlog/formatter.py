@@ -1,6 +1,7 @@
 import colorlog
 from scrapy.crawler import Crawler
 from scrapy.settings import Settings
+from typing_extensions import Self
 
 DEFAULT_FORMAT = (
     "%(light_black)s%(asctime)s%(reset)s "
@@ -22,11 +23,11 @@ DEFAULT_COLORS = {
 
 class ColoredFormatter(colorlog.ColoredFormatter):
     @classmethod
-    def from_crawler(cls, crawler: Crawler):
+    def from_crawler(cls, crawler: Crawler) -> Self:
         return cls.from_settings(crawler.settings)
 
     @classmethod
-    def from_settings(cls, settings: Settings):
+    def from_settings(cls, settings: Settings) -> Self:
         return cls(
             fmt=settings.get("COLORLOG_FORMAT", DEFAULT_FORMAT),
             datefmt=settings.get("COLORLOG_DATEFORMAT", DEFAULT_DATEFORMAT),
